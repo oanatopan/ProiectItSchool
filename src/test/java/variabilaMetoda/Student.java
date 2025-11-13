@@ -63,7 +63,6 @@ public class Student {
         System.out.println("adresa studentului este "+adresa);
         System.out.println("sexul studentului este "+sex);
         System.out.println("are studentul restante? este "+areRestante);
-
         //print inseamna ca afiseaza valoarea si ramane pe randul curent
         //println inseamna ca afiseaza valoarea si merge la randul urmator
     }

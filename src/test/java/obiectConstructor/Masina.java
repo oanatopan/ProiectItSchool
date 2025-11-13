@@ -93,7 +93,6 @@ public class Masina {
             System.out.println("Impozitul este de 100 ron ");
         }
     }
-
     public void calculPret() {
         if (pret != 0){
             System.out.println("Pretul masinii este?"+ pret);
