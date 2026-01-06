@@ -1,24 +1,24 @@
+
 package oopMostenire;
 
-public class AngajatSportivStudent extends Persoana implements AngajatInteface,SportivInterface, StudentInterface {
+public class AngajatSportivStudent extends Persoana implements StudentInterface, SportivInterface, AngajatInterface{
     private String firma;
     private double salariu;
     private String contract;
     private int zileLibere;
-
     private String sport;
     private boolean sportEchipa;
     private int experienta;
-
     private String facultate;
     private String domeniu;
     private int anul;
+    private boolean restante;
 
-    public AngajatSportivStudent(String nume, String prenume, int varsta, String adresa, String firma, String contract, double salariu, int zileLibere, String sport, boolean sportEchipa, int experienta, String facultate, String domeniu, int anul, boolean restante) {
+    public AngajatSportivStudent(String nume, String prenume, int varsta, String adresa, String firma, double salariu, String contract, int zileLibere, String sport, boolean sportEchipa, int experienta, String facultate, String domeniu, int anul, boolean restante) {
         super(nume, prenume, varsta, adresa);
         this.firma = firma;
-        this.contract = contract;
         this.salariu = salariu;
+        this.contract = contract;
         this.zileLibere = zileLibere;
         this.sport = sport;
         this.sportEchipa = sportEchipa;
@@ -28,8 +28,6 @@ public class AngajatSportivStudent extends Persoana implements AngajatInteface,S
         this.anul = anul;
         this.restante = restante;
     }
-
-    private boolean restante;
 
     @Override
     public void ajungeLaTimpLaBirou() {
@@ -57,7 +55,7 @@ public class AngajatSportivStudent extends Persoana implements AngajatInteface,S
     }
 
     @Override
-    public void respectaRegimAlimentar() {
+    public void respectaRegimul() {
 
     }
 
@@ -75,12 +73,6 @@ public class AngajatSportivStudent extends Persoana implements AngajatInteface,S
     public void saNuAibaRestante() {
 
     }
+
+//    TEMA:
 }
-
-
-// facem o clasa generala- restaurant - declaram niste proprietati generale
-// incepem sa facem variantele specifice- 2 clase (una restaurant vegan, una non vegan) . ambele mostenesc casa restaurant
-//
-// facem o interfata = restaurantveganinterface- defineste refulile pentru un restraurant vegan - 2 metode abstracte  = serveste mancare vegana- 2 meniu vegan
-// la fel si pentru restaurant non vegan (2 metode abstracte - 1 servesteMancareNonVegana 2 MeniuNonVegan
-// Deschidem un nou restaurant mixt ( o clasa Restaurant Mixt) care mosteneste clasa Restaurant care implementeaza ambele interfete

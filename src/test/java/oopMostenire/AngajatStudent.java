@@ -1,11 +1,10 @@
 package oopMostenire;
 
-public class AngajatStudent extends Persoana implements AngajatInteface, StudentInterface {
+public class AngajatStudent extends Persoana implements AngajatInterface, StudentInterface {
     private String firma;
     private double salariu;
     private String contract;
     private int zileLibere;
-
     private String facultate;
     private String domeniu;
     private int anul;
@@ -22,7 +21,6 @@ public class AngajatStudent extends Persoana implements AngajatInteface, Student
         this.anul = anul;
         this.restante = restante;
     }
-
 
     @Override
     public void ajungeLaTimpLaBirou() {

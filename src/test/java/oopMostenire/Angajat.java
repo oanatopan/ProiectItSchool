@@ -1,44 +1,51 @@
+
 package oopMostenire;
 
-public class Angajat extends Persoana implements AngajatInteface {
+import java.sql.SQLOutput;
+
+public class Angajat extends Persoana implements AngajatInterface {
 
     private String firma;
     private double salariu;
-   private String contract;
+    private String contract;
     private int zileLibere;
 
-    public Angajat(String nume,String prenume, int varsta, String adresa, String firma, double salariu, String contract, int zileLibere) {
+    public Angajat(String nume, String prenume, int varsta, String adresa, String firma, double salariu, String contract, int zileLibere) {
         super(nume, prenume, varsta, adresa);
         this.firma = firma;
         this.salariu = salariu;
         this.contract = contract;
         this.zileLibere = zileLibere;
     }
-        public void infoAngajat(){
-            infoPersoana();
-            System.out.println("Firma la care lucreaza angajatul este" + firma);
-            System.out.println(("Salariul angajatului este" + salariu));
-            System.out.println("Perioada contractului este" + contract);
-            System.out.println("Cate zile libere are angajatul?"+ zileLibere );
-        }
 
-        public void mananca(){
-        System.out.println("Angajatul mananca atunci cand are pauza ");
-        }
-
-        // polimorfirsm static
-
-    //metoda fara parametrii
-    public void afiseazaDetalii(){
-        System.out.println("Afisez toti angajatii din companie ");
+    public void infoAngajat() {
+        infoPersoana();
+        System.out.println("Firma la care lucreaza angajatul este " + firma);
+        System.out.println("Salariul angajatului este " + salariu);
+        System.out.println("Perioada contractului este " + contract);
+        System.out.println("Cate zile libere are angajul? " + zileLibere);
     }
-        // afisam detalii dupa departament
-        public void afiseazaDetalii(String departament) {
-            System.out.println(" Afisez angajatii din firma : " + firma);
-        }
-    public void afiseazaDetalii(String departament, boolean contract) {
-        System.out.println("Afisez angajatii din departamentul: " + departament +
-                " cu contract pe perioada: " + contract);
+
+    public void mananca() {
+        System.out.println("Angajatul mananca atunci cand are pauza");
+
+    }
+
+//    Polimorfism STATIC
+//    Metoda fara parametri
+
+    public void afiseazaDetaliile() {
+        System.out.println("Afisez toti angajatii din companie");
+    }
+
+//    Afisam detalii dupa departament
+
+    public void afiseazaDetalii(String firma) {
+        System.out.println("Afisez angajatii din departamentul: " + firma);
+    }
+
+    public void afiseazaDetalii(String firma, boolean contract) {
+        System.out.println("Afisez angajatii din: " + firma + " Cu contract pe perioada" + contract);
     }
 
     public String getFirma() {
@@ -71,16 +78,16 @@ public class Angajat extends Persoana implements AngajatInteface {
 
     @Override
     public void ajungeLaTimpLaBirou() {
-System.out.println("Angajatul trebuie sa ajunga la birou la 8");
+        System.out.println("Angajatul trebuie sa ajunga la birou la ora 8");
     }
 
     @Override
     public void munceste() {
-System.out.println("Angajatul trebuie sa munceasca in intervalul 8-17");
+        System.out.println("Angajatul trebuie sa munceasca in intervalul 8 - 17");
     }
 
     @Override
     public void respectaRegulamentulIntern() {
-System.out.println("Angjatul respecta regulametul intern");
+        System.out.println("Angajatul este obligat sa respecte ordinul intern");
     }
 }
